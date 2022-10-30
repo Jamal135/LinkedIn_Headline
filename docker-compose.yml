@@ -2,6 +2,11 @@ version: "3.9"
 services:
   selenium:
     image: "selenium/standalone-firefox"
+    deploy:
+      resources:
+        limits:
+          cpus: 0.2
+          memory: 256M
     environment:
       VNC_NO_PASSWORD: 1
       SE_NODE_SESSION_TIMEOUT: 999999999
@@ -15,6 +20,11 @@ services:
       retries: 3
   linkedin-headline:
     build: .
+    deploy:
+      resources:
+        limits:
+          cpus: 0.2
+          memory: 256M
     links:
       - "selenium:selenium"
     depends_on:
