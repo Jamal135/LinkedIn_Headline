@@ -7,4 +7,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "-u", "instagram_bio.py", "production"]
+CMD [ "python3", "-u", "linkedin_headline.py", "production"]
